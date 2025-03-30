@@ -41,12 +41,14 @@ Here’s what `Kira-Proxy` can do with its commands (type them in the game chat)
 
 ## Installation
 
+---
+
 ### Termux (Android)
 1. **Install Termux**:
-   - Get it from [F-Droid](https://f-droid.org/packages/com.termux/) (Google Play version won’t work).
+   - Download it from [F-Droid](https://f-droid.org/packages/com.termux/). (Google Play version won’t work!)
 
 2. **Install Go**:
-   - Update Termux:
+   - Open Termux and update it:
      ```
      pkg update && pkg upgrade
      ```
@@ -54,38 +56,47 @@ Here’s what `Kira-Proxy` can do with its commands (type them in the game chat)
      ```
      pkg install golang
      ```
-   - Check: `go version`.
+   - Check it works:
+     ```
+     go version
+     ```
 
-3. **Download gophertunnel**:
+3. **Get gophertunnel**:
    - Install `git`:
      ```
      pkg install git
      ```
-   - Download:
+   - Download the gophertunnel library:
      ```
      git clone https://github.com/sandertv/gophertunnel
      cd gophertunnel
      ```
 
 4. **Add Kira-Proxy**:
-   - Download `kira.go` from this repo:
+   - Create a new file called `kira.go`:
      ```
-     create a kira file.go : nano kira.go , then copy the code from Main.go to this repository and paste it into your file
+     nano kira.go
      ```
+   - Copy the code from `main.go` in this repo (find it in the files above), paste it into `nano`, then save:
+     - Press `Ctrl+O`, hit `Enter` to save, then `Ctrl+X` to exit.
 
 5. **Set Up Config**:
-   - Edit `config.toml` with `nano`:
+   - Edit `config.toml`:
      ```
      nano config.toml
      ```
-   - Change `RemoteAddress` to your server (e.g., `play.nethergames.org:19132`).
-   - Save (Ctrl+O, Enter, Ctrl+X).
+   - Change `RemoteAddress` to your server (e.g., `play.nethergames.org:19132`). Leave `LocalAddress` as `0.0.0.0:19132`.
+   - Save: `Ctrl+O`, `Enter`, then `Ctrl+X`.
 
 6. **Run It**:
    - Start the proxy:
      ```
      go run kira.go
      ```
+   - Open Minecraft, connect to `localhost:19132`, and try the commands!
+
+---
+
 
 ## Configuration
 Edit `config.toml` in the `gophertunnel` folder to change where the proxy listens and connects:
