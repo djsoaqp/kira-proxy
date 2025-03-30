@@ -63,7 +63,7 @@ Here’s what `Kira-Proxy` can do with its commands (type them in the game chat)
      ```
    - Download:
      ```
-     got clone https://github.com/sandertv/gophertunnel
+     git clone https://github.com/sandertv/gophertunnel
      cd gophertunnel
      ```
 
