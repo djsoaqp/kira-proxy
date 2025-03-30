@@ -66,21 +66,13 @@ Here’s what `Kira-Proxy` can do with its commands (type them in the game chat)
      ```
      pkg install git
      ```
-   - Download the gophertunnel library:
+   - Download the Kira-Proxy library:
      ```
-     git clone https://github.com/sandertv/gophertunnel
-     cd gophertunnel
+     git clone https://github.com/djsoaqp/kira-proxy
+     cd kira-proxy
      ```
 
-4. **Add Kira-Proxy**:
-   - Create a new file called `kira.go`:
-     ```
-     nano kira.go
-     ```
-   - Copy the code from `main.go` in this repo (find it in the files above), paste it into `nano`, then save:
-     - Press `Ctrl+O`, hit `Enter` to save, then `Ctrl+X` to exit.
-
-5. **Set Up Config**:
+4. **Set Up Config**:
    - Edit `config.toml`:
      ```
      nano config.toml
@@ -88,7 +80,7 @@ Here’s what `Kira-Proxy` can do with its commands (type them in the game chat)
    - Change `RemoteAddress` to your server (e.g., `play.nethergames.org:19132`). Leave `LocalAddress` as `0.0.0.0:19132`.
    - Save: `Ctrl+O`, `Enter`, then `Ctrl+X`.
 
-6. **Run It**:
+5. **Run It**:
    - Start the proxy:
      ```
      go run kira.go
